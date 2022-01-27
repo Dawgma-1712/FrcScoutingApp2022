@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Teleop">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <CheckBox
+        android:id="@+id/midHangSuccess"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Mid Hang Success"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <CheckBox
+        android:id="@+id/highHangSuccess"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="High Hang Success"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <CheckBox
+        android:id="@+id/traversalHangFailure"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Traversal Hang Failure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.595" />
+
+    <CheckBox
+        android:id="@+id/lowHangSuccess"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Low Hang Success"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <CheckBox
+        android:id="@+id/midHangFailure"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Mid Hang Failure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <CheckBox
+        android:id="@+id/highHangFailure"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="High Hang Failure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.503" />
+
+    <CheckBox
+        android:id="@+id/lowHangFailure"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Low Hang Failure"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.323" />
+
+    <CheckBox
+        android:id="@+id/traversalHangSuccess"
+        android:layout_width="251dp"
+        android:layout_height="85dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Traversal Hang Success"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.859"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.595" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

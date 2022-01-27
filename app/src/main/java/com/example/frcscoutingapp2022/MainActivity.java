@@ -37,6 +37,8 @@ public class MainActivity extends AppCompatActivity {
         VPadapter vpAdapter = new VPadapter(getSupportFragmentManager(), FragmentPagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT);
         vpAdapter.addFragment(new Auto(), "Auto");
         vpAdapter.addFragment(new Teleop(), "Teleop");
+        vpAdapter.addFragment(new endgame(),"Endgame");
+        vpAdapter.addFragment(new save(),"Save");
         viewPager.setAdapter(vpAdapter);
 
     }

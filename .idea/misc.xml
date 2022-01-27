@@ -4,6 +4,8 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/olive/AndroidStudioProjects/FrcScoutingApp2022/app/src/main/res/layout/fragment_auto.xml" value="0.1793478260869565" />
+        <entry key="..\:/Users/olive/AndroidStudioProjects/FrcScoutingApp2022/app/src/main/res/layout/fragment_endgame.xml" value="0.7811860940695297" />
+        <entry key="..\:/Users/olive/AndroidStudioProjects/FrcScoutingApp2022/app/src/main/res/layout/fragment_teleop.xml" value="0.72" />
       </map>
     </option>
   </component>
