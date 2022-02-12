@@ -7,58 +7,139 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
+import android.widget.TextView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link Teleop#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class Teleop extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
-    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+public class Teleop extends Fragment implements View.OnClickListener{
 
-    // TODO: Rename and change types of parameters
-    private String mParam1;
-    private String mParam2;
+    //initialize variables
 
-    public Teleop() {
-        // Required empty public constructor
-    }
+    //Initialize upper hub text views
+    private TextView upperHubTeleopScored;
+    private TextView upperHubTeleopMissed;
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment Teleop.
-     */
-    // TODO: Rename and change types and number of parameters
-    public static Teleop newInstance(String param1, String param2) {
-        Teleop fragment = new Teleop();
-        Bundle args = new Bundle();
-        args.putString(ARG_PARAM1, param1);
-        args.putString(ARG_PARAM2, param2);
-        fragment.setArguments(args);
-        return fragment;
-    }
+    //initialize lower hub text views
+    private TextView lowerHubTeleopMissed;
+    private TextView lowerHubTeleopScored;
+    
+    //counter variables
+    private int upperHubTeleopScoredCounter = 0;
+    private int upperHubTeleopMissedCounter = 0;
 
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        if (getArguments() != null) {
-            mParam1 = getArguments().getString(ARG_PARAM1);
-            mParam2 = getArguments().getString(ARG_PARAM2);
-        }
-    }
+    private int lowerHubTeleopScoredCounter = 0;
+    private int lowerHubTeleopMissedCounter = 0;
 
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_teleop, container, false);
+        View view =  inflater.inflate(R.layout.fragment_teleop, container, false);
+        //Define TextViews
+        upperHubTeleopScored = (TextView) view.findViewById(R.id.upperHubTeleopScored);
+        upperHubTeleopMissed = (TextView) view.findViewById(R.id.upperHubTeleopMissed);
+
+        lowerHubTeleopScored = (TextView) view.findViewById(R.id.lowerHubTeleopScored);
+        lowerHubTeleopMissed = (TextView) view.findViewById(R.id.lowerHubTeleopMissed);
+
+
+
+
+        //Upper buttons
+        view.findViewById(R.id.upperHubTeleopScoredIncrease).setOnClickListener(this);
+        view.findViewById(R.id.upperHubTeleopScoredDecrease).setOnClickListener(this);
+
+        view.findViewById(R.id.upperHubTeleopMissedIncrease).setOnClickListener(this);
+        view.findViewById(R.id.upperHubTeleopMissedDecrease).setOnClickListener(this);
+
+        //Lower port buttons
+        view.findViewById(R.id.lowerHubTeleopScoredIncrease).setOnClickListener(this);
+        view.findViewById(R.id.lowerHubTeleopScoredDecrease).setOnClickListener(this);
+
+        view.findViewById(R.id.lowerHubTeleopMissedIncrease).setOnClickListener(this);
+        view.findViewById(R.id.lowerHubTeleopMissedDecrease).setOnClickListener(this);
+
+
+        return view;
     }
+
+
+
+    @Override
+    public void onClick(View view) {
+
+        switch(view.getId()){
+            case R.id.upperHubTeleopScoredIncrease:
+                System.out.println(MainActivity.checkBoxData);
+                upperHubTeleopScoredCounter++;
+                upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
+                //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] + 1);
+                MainActivity.upperScoredTeleop++;
+                break;
+
+            case R.id.upperHubTeleopScoredDecrease:
+                upperHubTeleopScoredCounter--;
+                upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
+                //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] - 1);
+                MainActivity.upperScoredTeleop--;
+                break;
+
+            case R.id.upperHubTeleopMissedIncrease:
+                upperHubTeleopMissedCounter++;
+                upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
+                //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] + 1);
+                MainActivity.upperMissedTeleop++;
+                break;
+
+            case R.id.upperHubTeleopMissedDecrease:
+                upperHubTeleopMissedCounter--;
+                upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
+                //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] - 1);
+                MainActivity.upperMissedTeleop--;
+                break;
+
+            case R.id.lowerHubTeleopScoredIncrease:
+                lowerHubTeleopScoredCounter++;
+                lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
+                //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] + 1);
+                MainActivity.lowerScoredTeleop++;
+                break;
+
+            case R.id.lowerHubTeleopScoredDecrease:
+                lowerHubTeleopScoredCounter--;
+                lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
+                //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
+                MainActivity.lowerScoredTeleop--;
+                break;
+
+            case R.id.lowerHubTeleopMissedIncrease:
+                lowerHubTeleopMissedCounter++;
+                lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
+                //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] + 1);
+                MainActivity.lowerMissedTeleop++;
+                break;
+
+            case R.id.lowerHubTeleopMissedDecrease:
+                lowerHubTeleopMissedCounter--;
+                lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
+                //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] - 1);
+                MainActivity.lowerMissedTeleop--;
+                break;
+
+
+
+
+        }
+    }
+
+    public void onResume(){
+        super.onResume();
+
+        upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
+        upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
+        lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
+        lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
+    }
+
+
+
 }
