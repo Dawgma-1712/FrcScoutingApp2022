@@ -4,85 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background = "@color/white"
     tools:context=".Teleop">
 
     <!-- TODO: Update blank fragment layout -->
 
 
-    <Button
-        android:id="@+id/lowerHubTeleopMissedDecrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="-"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/lowerHubTeleopScored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504" />
-
-    <TextView
-        android:id="@+id/upperHubTeleopScored"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.197"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scored"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.29" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Missed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431" />
-
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Scored"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.154"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.431" />
-
     <TextView
         android:id="@+id/upperHubTeleopLabel"
+        android:textColor = "@color/black"
         android:layout_width="78dp"
         android:layout_height="46dp"
         android:text="Upper"
@@ -95,20 +25,24 @@
         app:layout_constraintVertical_bias="0.254" />
 
     <Button
-        android:id="@+id/upperHubTeleopMissedDecrease"
+        android:id="@+id/upperHubTeleopMissedIncrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="-"
+        android:text="+"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
+        app:layout_constraintVertical_bias="0.415" />
 
     <Button
         android:id="@+id/upperHubTeleopScoredDecrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="-"
@@ -118,36 +52,12 @@
         app:layout_constraintHorizontal_bias="0.007"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
-
-    <Button
-        android:id="@+id/upperHubTeleopMissedIncrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="+"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.953"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
-
-    <Button
-        android:id="@+id/upperHubTeleopScoredIncrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="+"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.287"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.345" />
+        app:layout_constraintVertical_bias="0.415" />
 
     <Button
         android:id="@+id/lowerHubTeleopMissedIncrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="+"
@@ -156,10 +66,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.953"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
 
     <TextView
         android:id="@+id/lowerHubTeleopMissed"
+        android:textColor = "@color/black"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="0"
@@ -168,46 +80,26 @@
         app:layout_constraintHorizontal_bias="0.756"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.504" />
-
-    <TextView
-        android:id="@+id/upperHubTeleopMissed"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.756"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.358" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Missed"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.791"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.289" />
+        app:layout_constraintVertical_bias="0.572" />
 
     <Button
-        android:id="@+id/lowerHubTeleopScoredIncrease"
+        android:id="@+id/lowerHubTeleopScoredDecrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:text="+"
+        android:text="-"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintHorizontal_bias="0.007"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
 
     <TextView
         android:id="@+id/lowerHubTeleopLabel"
+        android:textColor = "@color/black"
         android:layout_width="66dp"
         android:layout_height="34dp"
         android:text="Lower"
@@ -217,103 +109,254 @@
         app:layout_constraintHorizontal_bias="0.466"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.42" />
+        app:layout_constraintVertical_bias="0.488" />
+
+    <TextView
+        android:id="@+id/lowerHubTeleopScored"
+        android:textColor = "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.572" />
 
     <Button
-        android:id="@+id/lowerHubTeleopScoredDecrease"
+        android:id="@+id/upperHubTeleopMissedDecrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
         android:layout_width="60dp"
         android:layout_height="60dp"
         android:text="-"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.007"
+        app:layout_constraintHorizontal_bias="0.631"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <TextView
+        android:id="@+id/upperHubTeleopScored"
+        android:textColor = "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.197"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <TextView
+        android:id="@+id/upperHubTeleopMissed"
+        android:textColor = "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.756"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.425" />
+
+    <TextView
+        android:id="@+id/upperAutoScoredLabel"
+        android:textColor = "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scored"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.357" />
+
+    <Button
+        android:id="@+id/lowerHubTeleopScoredIncrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <Button
+        android:id="@+id/lowerHubTeleopMissedDecrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="-"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.631"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.57" />
+
+    <TextView
+        android:id="@+id/lowerAutoMissed"
+        android:textColor = "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Missed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <TextView
+        android:id="@+id/upperAutoMissedLabel"
+        android:textColor = "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Missed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.791"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.356" />
+
+    <TextView
+        android:id="@+id/lowerAutoScoredLabel"
+        android:textColor = "@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scored"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.154"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.498" />
+
+    <Button
+        android:id="@+id/upperHubTeleopScoredIncrease"
+        android:textColor = "@color/white"
+        android:background = "@color/maroon4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:text="+"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.287"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.415" />
+
+    <CheckBox
+        android:id="@+id/fenderCheckBox"
+        android:textColor = "@color/black"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+
+        android:minHeight="48dp"
+        android:onClick="onCheckBoxClicked"
+        android:text="Fender"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.762" />
 
     <CheckBox
         android:id="@+id/tarmacCheckBox"
-        android:layout_width="146dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="12dp"
+        android:textColor = "@color/black"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+
+        android:layout_marginStart="215dp"
+        android:layout_marginEnd="239dp"
 
         android:button="@null"
         android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-
         android:minWidth="48dp"
         android:minHeight="48dp"
         android:onClick="onCheckBoxClicked"
         android:text="Tarmac"
-        app:layout_constraintEnd_toEndOf="@+id/fenderCheckBox"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/fenderCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/fenderCheckBox" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.815" />
 
     <TextView
         android:id="@+id/shotFromTextView"
+        android:textColor = "@color/black"
         android:layout_width="135dp"
         android:layout_height="29dp"
         android:text="Shot From"
         android:textSize="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.586" />
-
-    <CheckBox
-        android:id="@+id/generalLocationCheckBox"
-        android:layout_width="144dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="28dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="General"
-
-        app:layout_constraintEnd_toEndOf="@+id/LaunchpadCheckBox"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/LaunchpadCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/LaunchpadCheckBox" />
-
-    <CheckBox
-        android:id="@+id/fenderCheckBox"
-        android:layout_width="157dp"
-        android:layout_height="49dp"
-        android:layout_marginTop="8dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-
-        android:text="Fender"
-        app:layout_constraintEnd_toEndOf="@+id/shotFromTextView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/shotFromTextView"
-        app:layout_constraintTop_toBottomOf="@+id/shotFromTextView" />
+        app:layout_constraintVertical_bias="0.717" />
 
     <CheckBox
         android:id="@+id/LaunchpadCheckBox"
-        android:layout_width="146dp"
-        android:layout_height="48dp"
+        android:textColor = "@color/black"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
 
-        android:layout_marginTop="24dp"
         android:button="@null"
         android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
         android:minWidth="48dp"
         android:minHeight="48dp"
+
         android:onClick="onCheckBoxClicked"
         android:text="Launchpad"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.481"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
 
-        app:layout_constraintEnd_toEndOf="@+id/tarmacCheckBox"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/tarmacCheckBox"
-        app:layout_constraintTop_toBottomOf="@+id/tarmacCheckBox" />
+    <CheckBox
+        android:id="@+id/generalLocationCheckBox"
+        android:textColor = "@color/black"
+        android:layout_width="110dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="215dp"
+        android:layout_marginEnd="241dp"
+        android:button="@null"
+        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+        android:minWidth="48dp"
+        android:minHeight="48dp"
+
+        android:onClick="onCheckBoxClicked"
+        android:text="General"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.617"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.916" />
 
     <TableLayout
         android:layout_width="163dp"
@@ -321,10 +364,10 @@
         android:stretchColumns="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.091"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122">
+        app:layout_constraintVertical_bias="0.158">
 
         <TableRow>
 
@@ -353,6 +396,7 @@
 
             <CheckBox
                 android:id="@+id/HPPickupCheckBox"
+                android:textColor = "@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:button="@null"
@@ -378,15 +422,16 @@
         android:stretchColumns="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
+        app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.124">
+        app:layout_constraintVertical_bias="0.161">
 
         <TableRow>
 
             <CheckBox
                 android:id="@+id/playedDefenseCheckBox"
+                android:textColor = "@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:button="@null"
@@ -411,6 +456,7 @@
 
             <CheckBox
                 android:id="@+id/defendedOnCheckBox"
+                android:textColor = "@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:button="@null"
@@ -429,6 +475,7 @@
 
             <EditText
                 android:id="@+id/defendedOnTeamNum"
+                android:textColor = "@color/black"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:hint="Team #"

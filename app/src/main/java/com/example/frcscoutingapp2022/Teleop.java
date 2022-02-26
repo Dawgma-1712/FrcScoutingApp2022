@@ -77,11 +77,12 @@ public class Teleop extends Fragment implements View.OnClickListener{
                 break;
 
             case R.id.upperHubTeleopScoredDecrease:
-                upperHubTeleopScoredCounter--;
-                upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
-                //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] - 1);
-                MainActivity.upperScoredTeleop--;
-                break;
+                if(upperHubTeleopScoredCounter > 0) {
+                    upperHubTeleopScoredCounter--;
+                    upperHubTeleopScored.setText(Integer.toString(upperHubTeleopScoredCounter));
+                    //MainActivity.editMatchData(1, 0, MainActivity.getButtonData()[0][0] - 1);
+                    MainActivity.upperScoredTeleop--;
+                } break;
 
             case R.id.upperHubTeleopMissedIncrease:
                 upperHubTeleopMissedCounter++;
@@ -91,11 +92,12 @@ public class Teleop extends Fragment implements View.OnClickListener{
                 break;
 
             case R.id.upperHubTeleopMissedDecrease:
-                upperHubTeleopMissedCounter--;
-                upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
-                //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] - 1);
-                MainActivity.upperMissedTeleop--;
-                break;
+                if(upperHubTeleopMissedCounter > 0) {
+                    upperHubTeleopMissedCounter--;
+                    upperHubTeleopMissed.setText(Integer.toString(upperHubTeleopMissedCounter));
+                    //MainActivity.editMatchData(1, 1, MainActivity.getButtonData()[0][1] - 1);
+                    MainActivity.upperMissedTeleop--;
+                } break;
 
             case R.id.lowerHubTeleopScoredIncrease:
                 lowerHubTeleopScoredCounter++;
@@ -105,11 +107,12 @@ public class Teleop extends Fragment implements View.OnClickListener{
                 break;
 
             case R.id.lowerHubTeleopScoredDecrease:
-                lowerHubTeleopScoredCounter--;
-                lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
-                //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
-                MainActivity.lowerScoredTeleop--;
-                break;
+                if(lowerHubTeleopScoredCounter > 0) {
+                    lowerHubTeleopScoredCounter--;
+                    lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
+                    //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
+                    MainActivity.lowerScoredTeleop--;
+                } break;
 
             case R.id.lowerHubTeleopMissedIncrease:
                 lowerHubTeleopMissedCounter++;
@@ -119,15 +122,12 @@ public class Teleop extends Fragment implements View.OnClickListener{
                 break;
 
             case R.id.lowerHubTeleopMissedDecrease:
-                lowerHubTeleopMissedCounter--;
-                lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
-                //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] - 1);
-                MainActivity.lowerMissedTeleop--;
-                break;
-
-
-
-
+                if(lowerHubTeleopMissedCounter > 0) {
+                    lowerHubTeleopMissedCounter--;
+                    lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
+                    //MainActivity.editMatchData(1, 3, MainActivity.getButtonData()[0][3] - 1);
+                    MainActivity.lowerMissedTeleop--;
+                } break;
         }
     }
 
@@ -139,6 +139,22 @@ public class Teleop extends Fragment implements View.OnClickListener{
         lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
         lowerHubTeleopMissed.setText(Integer.toString(lowerHubTeleopMissedCounter));
     }
+
+    public void clear(){
+        upperHubTeleopScored.setText(Integer.toString(0));
+        upperHubTeleopMissed.setText(Integer.toString(0));
+        lowerHubTeleopScored.setText(Integer.toString(0));
+        lowerHubTeleopMissed.setText(Integer.toString(0));
+
+        upperHubTeleopScoredCounter = 0;
+        upperHubTeleopMissedCounter = 0;
+
+        lowerHubTeleopScoredCounter = 0;
+        lowerHubTeleopMissedCounter = 0;
+
+    }
+
+
 
 
 

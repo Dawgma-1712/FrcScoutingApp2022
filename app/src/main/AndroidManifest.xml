@@ -9,8 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FrcScoutingApp2022">
+        <activity android:name=".MainActivity"></activity>
+        android:name=".GlobalVariables"
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeScreen"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.FrcScoutingApp2022.NoActionBar">

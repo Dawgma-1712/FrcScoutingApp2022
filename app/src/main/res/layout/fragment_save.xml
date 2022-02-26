@@ -32,14 +32,17 @@
         app:layout_constraintVertical_bias="0.156" />
 
     <Button
-        android:id="@+id/clearData"
+        android:id="@+id/newMatch2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Clear Data"
+        android:background="@color/white"
+        android:text="New Match"
+        android:textColor="@color/maroon1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/iv_output" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.767" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

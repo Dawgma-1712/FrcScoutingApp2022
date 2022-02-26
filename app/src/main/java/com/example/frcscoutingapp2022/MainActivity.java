@@ -38,11 +38,12 @@ public class MainActivity extends AppCompatActivity {
     public static Bitmap bitmap;
     private static boolean qrReady = false;
 
-    public static int teamNumber;
-    public static int matchNumber;
+    public static String teamNumber;
+    public static String matchNumber;
     public static int[][] buttonData;
     public static int[] checkBoxData;
-    public static String defendedOnByNumber;
+    public static String defendedOnByNumber = "";
+
 
     public static int taxi = 0;
     public static int groundPickup = 0;
@@ -64,7 +65,8 @@ public class MainActivity extends AppCompatActivity {
     public static int travFail = 0;
     public static int travSuccess = 0;
     public static int penalty = 0;
-    public static int deadbot = 0;
+    public static int deadBot = 0;
+    public static int noClimbAttempt = 0;
 
     public static int upperScoredAuto = 0;
     public static int upperMissedAuto = 0;
@@ -76,7 +78,6 @@ public class MainActivity extends AppCompatActivity {
     public static int upperMissedTeleop = 0;
     public static int lowerScoredTeleop = 0;
     public static int lowerMissedTeleop = 0;
-
 
 
 
@@ -100,13 +101,10 @@ public class MainActivity extends AppCompatActivity {
         vpAdapter.addFragment(new save(),"Save");
         viewPager.setAdapter(vpAdapter);
 
-//        buttonData = new int[][]{
-//                {0,0,0,0,0},
-//                {0,0,0,0}
-//
-//        };
-//
-//        checkBoxData = new int[]{0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        teamNumber = GlobalVariables.getTeamNum();
+        matchNumber = GlobalVariables.getMatchNum();
+
+
 
 
 
@@ -206,7 +204,19 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.taxi = checked ? 1 : 0;
 
                 break;
+            case R.id.penalized:
+                //MainActivity.checkBoxData[17] = checked ? 1 : 0;
+                MainActivity.penalty = checked ? 1 : 0;
 
+                break;
+            case R.id.deadBot:
+                //MainActivity.checkBoxData[18] = checked ? 1 : 0;
+                MainActivity.deadBot = checked ? 1 : 0;
+
+                break;
+            case R.id.noClimbAttempt:
+                //MainActivity.checkBoxData[19] = checked ? 1 : 0;
+                MainActivity.noClimbAttempt = checked ? 1 : 0;
         }
 
 
@@ -216,13 +226,13 @@ public class MainActivity extends AppCompatActivity {
         return buttonData;
     }
     public static int[] getCheckBoxData() { return checkBoxData; }
-
-    public void updateTeamAndMatchNum() {
-        teamNumber = Integer.parseInt(((EditText)findViewById(R.id.teamNum)).getText().toString());
-        matchNumber = Integer.parseInt(((EditText)findViewById(R.id.matchNum)).getText().toString());
-    }
-    public static int getTeamNumber() {return teamNumber;}
-    public static int getMatchNumber() {return matchNumber;}
+//
+//    public void updateTeamAndMatchNum() {
+//        teamNumber = Integer.parseInt(((EditText)findViewById(R.id.teamNum)).getText().toString());
+//        matchNumber = Integer.parseInt(((EditText)findViewById(R.id.matchNum)).getText().toString());
+//    }
+    public static String getTeamNumber() {return teamNumber;}
+    public static String getMatchNumber() {return matchNumber;}
 
 
 
@@ -230,16 +240,14 @@ public class MainActivity extends AppCompatActivity {
     public static Uri fileUri;
 
 
+
     public void saveMatchData(View view) {
         //Get text field values
-        teamNumber = 0;
-        matchNumber = 0;
+//        teamNumber = 0;
+//        matchNumber = 0;
+
         defendedOnByNumber = "";
         try {
-            if (((EditText) findViewById(R.id.teamNum)).getText().toString() != null && ((EditText) findViewById(R.id.matchNum)).getText().toString() != null) {
-                teamNumber = Integer.parseInt(((EditText) findViewById(R.id.teamNum)).getText().toString());
-                matchNumber = Integer.parseInt(((EditText) findViewById(R.id.matchNum)).getText().toString());
-            }
             if (((EditText) findViewById(R.id.defendedOnTeamNum)).getText().toString() != null) {
                 defendedOnByNumber = ((EditText) findViewById(R.id.defendedOnTeamNum)).getText().toString();
             }
@@ -252,59 +260,29 @@ public class MainActivity extends AppCompatActivity {
         System.out.println(matchNumber);
         System.out.println(defendedOnByNumber);
 
-
-
-
-
-
-
-
         String data = "";
 
 
-        data += (new Integer(teamNumber)).toString() + "," + (new Integer(matchNumber)).toString() + ","
-    /* Auto */   +taxi + "," + lowerScoredAuto + "," + lowerMissedAuto + "," + upperScoredAuto + "," + upperMissedAuto + "," + collectedCargo + ","
+        data += teamNumber + "," + matchNumber + ","
+    /* Auto */   + taxi + "," + lowerScoredAuto + "," + lowerMissedAuto + "," + upperScoredAuto + "," + upperMissedAuto + "," + collectedCargo + ","
     /* TeleOp */ + groundPickup + "," + HPPickup + "," + playedDefense + "," + defendedOn + "," + defendedOnByNumber + "," + lowerScoredTeleop + "," + lowerMissedTeleop + "," + upperScoredTeleop + "," + upperMissedTeleop + "," + fender + "," + tarmac + "," + launchPad + "," + genLoc + ","
     /* Climb */  + lowFail + "," + lowSuccess + "," + midFail + "," + midSuccess + "," + highFail + "," + highSuccess + "," + travFail + "," + travSuccess + ","
-    /* AddInfo*/ + penalty + "," + deadbot;
+    /* AddInfo*/ + penalty + "," + deadBot + "," + noClimbAttempt;
 
-
-        System.out.println(data);
-
-        //QR CODE STUFF
-
-        //Initialize multi format writer
-        MultiFormatWriter writer = new MultiFormatWriter();
-        try {
-            //Initialize bit matrix
-            BitMatrix matrix = writer.encode(data, BarcodeFormat.QR_CODE, 350, 350);
-            //Initialize barcode Encoder
-            BarcodeEncoder encoder = new BarcodeEncoder();
-            //initialize bitmap
-            bitmap = encoder.createBitmap(matrix);
-            System.out.println(bitmap);
-            qrReady = true;
-            //set bitmap on image view
-            //saveFragment.ivOutput.setImageBitmap(bitmap);
-
-
-        } catch(WriterException e){
-            e.printStackTrace();
-        }
 
 
         // Create and save file
-        if (teamNumber != 0 && matchNumber != 0) {
-            Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
-            intent.addCategory(Intent.CATEGORY_OPENABLE);
-            intent.setType("application/csv");
-            String fileName = "match" + (new Integer(matchNumber)).toString() + "_team" + (new Integer(teamNumber)).toString() + ".csv";
-            intent.putExtra(Intent.EXTRA_TITLE, fileName);
+
+        Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
+        intent.addCategory(Intent.CATEGORY_OPENABLE);
+        intent.setType("application/csv");
+        String fileName = "match" + matchNumber + "_team" + teamNumber + ".csv";
+        intent.putExtra(Intent.EXTRA_TITLE, fileName);
 
             // TODO: Automatically direct user to correct save location
 
             startActivityForResult(intent, CREATE_FILE);
-        }
+
 
 
 
@@ -328,7 +306,7 @@ public class MainActivity extends AppCompatActivity {
                         /* Auto */   +taxi + "," + lowerScoredAuto + "," + lowerMissedAuto + "," + upperScoredAuto + "," + upperMissedAuto + "," + collectedCargo + ","
                         /* TeleOp */ + groundPickup + "," + HPPickup + "," + playedDefense + "," + defendedOn + "," + defendedOnByNumber + "," + lowerScoredTeleop + "," + lowerMissedTeleop + "," + upperScoredTeleop + "," + upperMissedTeleop + "," + fender + "," + tarmac + "," + launchPad + "," + genLoc + ","
                         /* Climb */  + lowFail + "," + lowSuccess + "," + midFail + "," + midSuccess + "," + highFail + "," + highSuccess + "," + travFail + "," + travSuccess + ","
-                        /* AddInfo*/ + penalty + "," + deadbot;
+                        /* AddInfo*/ + penalty + "," + deadBot + "," + noClimbAttempt;
 
                 alterDocument(uri, data);
             }
@@ -349,4 +327,5 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
+
 }

@@ -90,12 +90,12 @@ public class Auto extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.upperHubAutoScoredDecrease:
-                upperAutoScoredCounter--;
-                upperAutoScored.setText(Integer.toString(upperAutoScoredCounter));
-                //MainActivity.editMatchData(0, 0, MainActivity.getButtonData()[0][0] - 1);
-                MainActivity.upperScoredAuto--;
-
-                break;
+                if(upperAutoScoredCounter > 0) {
+                    upperAutoScoredCounter--;
+                    upperAutoScored.setText(Integer.toString(upperAutoScoredCounter));
+                    //MainActivity.editMatchData(0, 0, MainActivity.getButtonData()[0][0] - 1);
+                    MainActivity.upperScoredAuto--;
+                } break;
 
             case R.id.upperHubAutoMissedIncrease:
                 upperAutoMissedCounter++;
@@ -106,12 +106,12 @@ public class Auto extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.upperHubAutoMissedDecrease:
-                upperAutoMissedCounter--;
-                upperAutoMissed.setText(Integer.toString(upperAutoMissedCounter));
-                //MainActivity.editMatchData(0, 1, MainActivity.getButtonData()[0][1] - 1);
-                MainActivity.upperMissedAuto--;
-
-                break;
+                if(upperAutoMissedCounter > 0) {
+                    upperAutoMissedCounter--;
+                    upperAutoMissed.setText(Integer.toString(upperAutoMissedCounter));
+                    //MainActivity.editMatchData(0, 1, MainActivity.getButtonData()[0][1] - 1);
+                    MainActivity.upperMissedAuto--;
+                } break;
 
             case R.id.lowerHubAutoScoredIncrease:
                 lowerAutoScoredCounter++;
@@ -122,11 +122,12 @@ public class Auto extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.lowerHubAutoScoredDecrease:
-                lowerAutoScoredCounter--;
-                lowerAutoScored.setText(Integer.toString(lowerAutoScoredCounter));
-                //MainActivity.editMatchData(0, 2, MainActivity.getButtonData()[0][2] - 1);
-                MainActivity.lowerScoredTeleop--;
-                break;
+                if(lowerAutoScoredCounter > 0) {
+                    lowerAutoScoredCounter--;
+                    lowerAutoScored.setText(Integer.toString(lowerAutoScoredCounter));
+                    //MainActivity.editMatchData(0, 2, MainActivity.getButtonData()[0][2] - 1);
+                    MainActivity.lowerScoredTeleop--;
+                } break;
 
             case R.id.lowerHubAutoMissedIncrease:
                 lowerAutoMissedCounter++;
@@ -136,11 +137,12 @@ public class Auto extends Fragment implements View.OnClickListener {
                 break;
 
             case R.id.lowerHubAutoMissedDecrease:
-                lowerAutoMissedCounter--;
-                lowerAutoMissed.setText(Integer.toString(lowerAutoMissedCounter));
-                //MainActivity.editMatchData(0, 3, MainActivity.getButtonData()[0][3] - 1);
-                MainActivity.lowerMissedAuto--;
-                break;
+                if(lowerAutoMissedCounter > 0) {
+                    lowerAutoMissedCounter--;
+                    lowerAutoMissed.setText(Integer.toString(lowerAutoMissedCounter));
+                    //MainActivity.editMatchData(0, 3, MainActivity.getButtonData()[0][3] - 1);
+                    MainActivity.lowerMissedAuto--;
+                } break;
 
 
             case R.id.collectedCargoIncrease:
@@ -150,16 +152,13 @@ public class Auto extends Fragment implements View.OnClickListener {
                 MainActivity.collectedCargo++;
                 break;
             case R.id.collectedCargoDecrease:
-                collectedCargoCounter--;
-                collectedCargo.setText(Integer.toString(collectedCargoCounter));
-                //MainActivity.editMatchData(0, 4, MainActivity.getButtonData()[0][4] - 1);
-                MainActivity.collectedCargo--;
-                break;
-
+                if(collectedCargoCounter > 0) {
+                    collectedCargoCounter--;
+                    collectedCargo.setText(Integer.toString(collectedCargoCounter));
+                    //MainActivity.editMatchData(0, 4, MainActivity.getButtonData()[0][4] - 1);
+                    MainActivity.collectedCargo--;
+                } break;
         }
-
-
-        
     }
 
     public void onResume() {

@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name = "maroon1"> #420606</color>
+    <color name = "maroon2"> #6D0c0c</color>
+    <color name = "maroon3"> #6f1010</color>
+    <color name = "maroon4"> #a10c0c</color>
+    <color name = "darkGrey"> #616161</color>
+    <color name = "lightGrey"> #8b8b8b</color>
 </resources>
