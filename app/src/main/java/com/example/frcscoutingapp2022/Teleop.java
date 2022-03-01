@@ -8,12 +8,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
 public class Teleop extends Fragment implements View.OnClickListener{
 
     //initialize variables
+
+    public static EditText defendedByNum;
 
     //Initialize upper hub text views
     private TextView upperHubTeleopScored;
@@ -34,12 +37,15 @@ public class Teleop extends Fragment implements View.OnClickListener{
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_teleop, container, false);
+
+        defendedByNum = (EditText) view.findViewById(R.id.defendedOnTeamNum);
         //Define TextViews
         upperHubTeleopScored = (TextView) view.findViewById(R.id.upperHubTeleopScored);
         upperHubTeleopMissed = (TextView) view.findViewById(R.id.upperHubTeleopMissed);
 
         lowerHubTeleopScored = (TextView) view.findViewById(R.id.lowerHubTeleopScored);
         lowerHubTeleopMissed = (TextView) view.findViewById(R.id.lowerHubTeleopMissed);
+
 
 
 

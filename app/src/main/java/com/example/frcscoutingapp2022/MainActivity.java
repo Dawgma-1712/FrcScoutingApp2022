@@ -35,6 +35,9 @@ public class MainActivity extends AppCompatActivity {
     private ViewPager viewPager;
     private save saveFragment;
 
+    public static EditText teamNumText;
+    public static EditText matchNumText;
+
     public static Bitmap bitmap;
     private static boolean qrReady = false;
 
@@ -101,8 +104,9 @@ public class MainActivity extends AppCompatActivity {
         vpAdapter.addFragment(new save(),"Save");
         viewPager.setAdapter(vpAdapter);
 
-        teamNumber = GlobalVariables.getTeamNum();
-        matchNumber = GlobalVariables.getMatchNum();
+        teamNumText = (EditText) findViewById(R.id.teamNum);
+        matchNumText = (EditText) findViewById(R.id.matchNum);
+
 
 
 
@@ -241,56 +245,7 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-    public void saveMatchData(View view) {
-        //Get text field values
-//        teamNumber = 0;
-//        matchNumber = 0;
-
-        defendedOnByNumber = "";
-        try {
-            if (((EditText) findViewById(R.id.defendedOnTeamNum)).getText().toString() != null) {
-                defendedOnByNumber = ((EditText) findViewById(R.id.defendedOnTeamNum)).getText().toString();
-            }
-        }
-        catch (Exception e){
-            System.out.println(e.getMessage());
-        }
-
-        System.out.println(teamNumber);
-        System.out.println(matchNumber);
-        System.out.println(defendedOnByNumber);
-
-        String data = "";
-
-
-        data += teamNumber + "," + matchNumber + ","
-    /* Auto */   + taxi + "," + lowerScoredAuto + "," + lowerMissedAuto + "," + upperScoredAuto + "," + upperMissedAuto + "," + collectedCargo + ","
-    /* TeleOp */ + groundPickup + "," + HPPickup + "," + playedDefense + "," + defendedOn + "," + defendedOnByNumber + "," + lowerScoredTeleop + "," + lowerMissedTeleop + "," + upperScoredTeleop + "," + upperMissedTeleop + "," + fender + "," + tarmac + "," + launchPad + "," + genLoc + ","
-    /* Climb */  + lowFail + "," + lowSuccess + "," + midFail + "," + midSuccess + "," + highFail + "," + highSuccess + "," + travFail + "," + travSuccess + ","
-    /* AddInfo*/ + penalty + "," + deadBot + "," + noClimbAttempt;
-
-
-
-        // Create and save file
-
-        Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
-        intent.addCategory(Intent.CATEGORY_OPENABLE);
-        intent.setType("application/csv");
-        String fileName = "match" + matchNumber + "_team" + teamNumber + ".csv";
-        intent.putExtra(Intent.EXTRA_TITLE, fileName);
-
-            // TODO: Automatically direct user to correct save location
-
-            startActivityForResult(intent, CREATE_FILE);
-
-
-
-
-
-
-
-
-    }
+    
 
     public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
         super.onActivityResult(requestCode, resultCode, resultData);

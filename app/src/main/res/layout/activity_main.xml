@@ -44,17 +44,28 @@
         app:layout_constraintVertical_bias="0.024"
         app:tabTextColor="@color/maroon1" />
 
-    <Button
-        android:id="@+id/saveFile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@color/white"
-        android:onClick="saveMatchData"
-        android:text="Save File"
-        android:textColor="@color/maroon1"
+    <EditText
+        android:id="@+id/teamNum"
+        android:layout_width="122dp"
+        android:layout_height="46dp"
+        android:hint="Team Num"
+        android:inputType="number"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.109"
+        app:layout_constraintHorizontal_bias="0.177"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <EditText
+        android:id="@+id/matchNum"
+        android:layout_width="122dp"
+        android:layout_height="46dp"
+        android:hint="Match Num"
+        android:inputType="number"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.817"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.016" />

@@ -7,29 +7,28 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 
-public class HomeScreen extends AppCompatActivity {
+public class HomeScreen extends AppCompatActivity implements View.OnClickListener{
 
-    private EditText teamNum;
-    private EditText matchNum;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_screen);
 
-        teamNum = findViewById(R.id.teamNum);
-        matchNum = findViewById(R.id.matchNum);
+        findViewById (R.id.startMatch).setOnClickListener(this);
+
+
 
     }
 
-    public void switchToMainActivity (View view) {
-        Intent intent = new Intent(this, MainActivity.class);
 
-        if (!teamNum.getText().toString().equals("") || !matchNum.getText().toString().equals("")) {
-            GlobalVariables.setTeamNum(teamNum.getText().toString());
-            GlobalVariables.setMatchNum(matchNum.getText().toString());
-            startActivity(intent);
-        }
-        else {
+    @Override
+    public void onClick(View view) {
+        switch(view.getId()){
+            case R.id.startMatch:
+                Intent intent = new Intent(this, MainActivity.class);
+                startActivity(intent);
+                break;
         }
     }
 }
