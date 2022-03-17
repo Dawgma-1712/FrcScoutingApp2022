@@ -107,6 +107,40 @@ public class MainActivity extends AppCompatActivity {
         teamNumText = (EditText) findViewById(R.id.teamNum);
         matchNumText = (EditText) findViewById(R.id.matchNum);
 
+        taxi = 0;
+        groundPickup = 0;
+        HPPickup = 0;
+        playedDefense=0;
+        defendedOn = 0 ;
+
+        fender = 0;
+        tarmac = 0;
+        launchPad = 0;
+        genLoc = 0;
+
+        lowFail = 0;
+        lowSuccess = 0;
+        midFail = 0;
+        midSuccess = 0;
+        highFail = 0;
+        highSuccess = 0;
+        travFail = 0;
+        travSuccess = 0;
+        penalty = 0;
+        deadBot = 0;
+        noClimbAttempt = 0;
+
+        upperScoredAuto = 0;
+        upperMissedAuto = 0;
+        lowerScoredAuto = 0;
+        lowerMissedAuto = 0;
+        collectedCargo = 0;
+
+        upperScoredTeleop = 0;
+        upperMissedTeleop = 0;
+        lowerScoredTeleop = 0;
+        lowerMissedTeleop = 0;
+
 
 
 
@@ -245,42 +279,10 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+
+
     
 
-    public void onActivityResult(int requestCode, int resultCode, Intent resultData) {
-        super.onActivityResult(requestCode, resultCode, resultData);
-        if (requestCode == CREATE_FILE && resultCode == Activity.RESULT_OK) {
-            Uri uri = null;
-            if (resultData != null) {
-                uri = resultData.getData();
-                fileUri = uri;
 
-                // Good luck reading :)
-                String data = "";
-                data += (new Integer(teamNumber)).toString() + "," + (new Integer(matchNumber)).toString() + ","
-                        /* Auto */   +taxi + "," + lowerScoredAuto + "," + lowerMissedAuto + "," + upperScoredAuto + "," + upperMissedAuto + "," + collectedCargo + ","
-                        /* TeleOp */ + groundPickup + "," + HPPickup + "," + playedDefense + "," + defendedOn + "," + defendedOnByNumber + "," + lowerScoredTeleop + "," + lowerMissedTeleop + "," + upperScoredTeleop + "," + upperMissedTeleop + "," + fender + "," + tarmac + "," + launchPad + "," + genLoc + ","
-                        /* Climb */  + lowFail + "," + lowSuccess + "," + midFail + "," + midSuccess + "," + highFail + "," + highSuccess + "," + travFail + "," + travSuccess + ","
-                        /* AddInfo*/ + penalty + "," + deadBot + "," + noClimbAttempt;
-
-                alterDocument(uri, data);
-            }
-        }
-    }
-
-    private void alterDocument(Uri uri, String data) {
-        try {
-            ParcelFileDescriptor pfd = this.getContentResolver().openFileDescriptor(uri, "w");
-            FileOutputStream fileOutputStream = new FileOutputStream(pfd.getFileDescriptor());
-            fileOutputStream.write((data + "\n").getBytes());
-            // Let the document provider know you're done by closing the stream.
-            fileOutputStream.close();
-            pfd.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
 }

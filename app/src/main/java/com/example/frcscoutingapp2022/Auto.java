@@ -34,17 +34,19 @@ public class Auto extends Fragment implements View.OnClickListener {
     //counter variables
     private int upperAutoScoredCounter = 0;
     private int upperAutoMissedCounter = 0;
-
     private int lowerAutoScoredCounter = 0;
     private int lowerAutoMissedCounter = 0;
-
-
     private int collectedCargoCounter = 0;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_auto, container, false);
+
+
+
+        collectedCargoCounter = 0;
         //Define TextViews
         upperAutoScored = (TextView) view.findViewById(R.id.upperHubAutoScored);
         upperAutoMissed = (TextView) view.findViewById(R.id.upperHubAutoMissed);

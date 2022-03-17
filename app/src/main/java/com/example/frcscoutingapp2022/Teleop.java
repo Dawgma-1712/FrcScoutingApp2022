@@ -29,7 +29,6 @@ public class Teleop extends Fragment implements View.OnClickListener{
     //counter variables
     private int upperHubTeleopScoredCounter = 0;
     private int upperHubTeleopMissedCounter = 0;
-
     private int lowerHubTeleopScoredCounter = 0;
     private int lowerHubTeleopMissedCounter = 0;
 
