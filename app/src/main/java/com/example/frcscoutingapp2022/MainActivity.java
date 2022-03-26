@@ -49,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     public static int taxi = 0;
-    public static int groundPickup = 0;
-    public static int HPPickup = 0;
     public static int playedDefense=0;
     public static int defendedOn = 0 ;
 
@@ -75,7 +73,6 @@ public class MainActivity extends AppCompatActivity {
     public static int upperMissedAuto = 0;
     public static int lowerScoredAuto = 0;
     public static int lowerMissedAuto = 0;
-    public static int collectedCargo = 0;
 
     public static int upperScoredTeleop = 0;
     public static int upperMissedTeleop = 0;
@@ -108,8 +105,6 @@ public class MainActivity extends AppCompatActivity {
         matchNumText = (EditText) findViewById(R.id.matchNum);
 
         taxi = 0;
-        groundPickup = 0;
-        HPPickup = 0;
         playedDefense=0;
         defendedOn = 0 ;
 
@@ -134,7 +129,6 @@ public class MainActivity extends AppCompatActivity {
         upperMissedAuto = 0;
         lowerScoredAuto = 0;
         lowerMissedAuto = 0;
-        collectedCargo = 0;
 
         upperScoredTeleop = 0;
         upperMissedTeleop = 0;
@@ -158,15 +152,6 @@ public class MainActivity extends AppCompatActivity {
 
         // Check which one clicked
         switch(view.getId()) {
-            case R.id.groundPickupCheckbox:
-                //MainActivity.checkBoxData[0] = checked ? 1 : 0;
-                MainActivity.groundPickup = checked ? 1 : 0;
-                break;
-            case R.id.HPPickupCheckBox:
-                //MainActivity.checkBoxData[1] = checked ? 1 : 0;
-                MainActivity.HPPickup = checked ? 1 : 0;
-
-                break;
             case R.id.playedDefenseCheckBox:
                 //MainActivity.checkBoxData[2] = checked ? 1 : 0;
                 MainActivity.playedDefense = checked ? 1 : 0;

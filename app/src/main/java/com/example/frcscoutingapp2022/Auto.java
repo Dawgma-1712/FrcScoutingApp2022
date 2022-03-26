@@ -26,17 +26,12 @@ public class Auto extends Fragment implements View.OnClickListener {
     int i;
 
 
-    //Initialize collected cargo text view
-    private TextView collectedCargo;
-
-
 
     //counter variables
     private int upperAutoScoredCounter = 0;
     private int upperAutoMissedCounter = 0;
     private int lowerAutoScoredCounter = 0;
     private int lowerAutoMissedCounter = 0;
-    private int collectedCargoCounter = 0;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -46,7 +41,6 @@ public class Auto extends Fragment implements View.OnClickListener {
 
 
 
-        collectedCargoCounter = 0;
         //Define TextViews
         upperAutoScored = (TextView) view.findViewById(R.id.upperHubAutoScored);
         upperAutoMissed = (TextView) view.findViewById(R.id.upperHubAutoMissed);
@@ -55,8 +49,6 @@ public class Auto extends Fragment implements View.OnClickListener {
         lowerAutoMissed = (TextView) view.findViewById(R.id.lowerHubAutoMissed);
 
 
-
-        collectedCargo = (TextView) view.findViewById(R.id.collectedCargo);
 
 
         //inner buttons
@@ -73,10 +65,6 @@ public class Auto extends Fragment implements View.OnClickListener {
         view.findViewById(R.id.lowerHubAutoMissedIncrease).setOnClickListener(this);
         view.findViewById(R.id.lowerHubAutoMissedDecrease).setOnClickListener(this);
 
-
-        //collected cargo buttons
-        view.findViewById(R.id.collectedCargoDecrease).setOnClickListener(this);
-        view.findViewById(R.id.collectedCargoIncrease).setOnClickListener(this);
 
         return view;
     }
@@ -145,21 +133,6 @@ public class Auto extends Fragment implements View.OnClickListener {
                     //MainActivity.editMatchData(0, 3, MainActivity.getButtonData()[0][3] - 1);
                     MainActivity.lowerMissedAuto--;
                 } break;
-
-
-            case R.id.collectedCargoIncrease:
-                collectedCargoCounter++;
-                collectedCargo.setText(Integer.toString(collectedCargoCounter));
-                //MainActivity.editMatchData(0, 4, MainActivity.getButtonData()[0][4] + 1);
-                MainActivity.collectedCargo++;
-                break;
-            case R.id.collectedCargoDecrease:
-                if(collectedCargoCounter > 0) {
-                    collectedCargoCounter--;
-                    collectedCargo.setText(Integer.toString(collectedCargoCounter));
-                    //MainActivity.editMatchData(0, 4, MainActivity.getButtonData()[0][4] - 1);
-                    MainActivity.collectedCargo--;
-                } break;
         }
     }
 
@@ -170,7 +143,6 @@ public class Auto extends Fragment implements View.OnClickListener {
         upperAutoMissed.setText(Integer.toString(upperAutoMissedCounter));
         lowerAutoScored.setText(Integer.toString(lowerAutoScoredCounter));
         lowerAutoMissed.setText(Integer.toString(lowerAutoMissedCounter));
-        collectedCargo.setText(Integer.toString(collectedCargoCounter));
 
     }
 }

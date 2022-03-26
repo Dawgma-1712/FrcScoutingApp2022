@@ -359,79 +359,23 @@
         app:layout_constraintVertical_bias="0.916" />
 
     <TableLayout
-        android:layout_width="163dp"
-        android:layout_height="102dp"
-        android:stretchColumns="1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.091"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.158">
-
-        <TableRow>
-
-            <CheckBox
-                android:id="@+id/groundPickupCheckbox"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:onClick="onCheckBoxClicked"
-                android:text="Pick up from ground"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.158"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.06" />
-
-
-        </TableRow>
-
-        <TableRow>
-
-            <CheckBox
-                android:id="@+id/HPPickupCheckBox"
-                android:textColor = "@color/black"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:button="@null"
-                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-                android:minWidth="48dp"
-                android:minHeight="48dp"
-                android:onClick="onCheckBoxClicked"
-                android:text="Pick up from HP"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.158"
-
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.06" />
-
-        </TableRow>
-    </TableLayout>
-
-    <TableLayout
         android:layout_width="217dp"
         android:layout_height="99dp"
         android:stretchColumns="1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.903"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.161">
+        app:layout_constraintVertical_bias="0.145">
 
-        <TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <CheckBox
                 android:id="@+id/playedDefenseCheckBox"
-                android:textColor = "@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:button="@null"
@@ -440,6 +384,7 @@
                 android:minHeight="48dp"
                 android:onClick="onCheckBoxClicked"
                 android:text="played defense"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.158"
@@ -451,12 +396,10 @@
 
         </TableRow>
 
-
         <TableRow>
 
             <CheckBox
                 android:id="@+id/defendedOnCheckBox"
-                android:textColor = "@color/black"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:button="@null"
@@ -465,6 +408,7 @@
                 android:minHeight="48dp"
                 android:onClick="onCheckBoxClicked"
                 android:text="Defended By"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
 
@@ -475,11 +419,11 @@
 
             <EditText
                 android:id="@+id/defendedOnTeamNum"
-                android:textColor = "@color/black"
                 android:layout_width="90dp"
                 android:layout_height="match_parent"
                 android:hint="Team #"
                 android:inputType="number"
+                android:textColor="@color/black"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.063"
