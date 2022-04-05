@@ -116,7 +116,7 @@ public class Auto extends Fragment implements View.OnClickListener {
                     lowerAutoScoredCounter--;
                     lowerAutoScored.setText(Integer.toString(lowerAutoScoredCounter));
                     //MainActivity.editMatchData(0, 2, MainActivity.getButtonData()[0][2] - 1);
-                    MainActivity.lowerScoredTeleop--;
+                    MainActivity.lowerScoredAuto--;
                 } break;
 
             case R.id.lowerHubAutoMissedIncrease:

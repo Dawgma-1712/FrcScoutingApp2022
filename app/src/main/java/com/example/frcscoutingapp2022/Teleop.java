@@ -109,6 +109,7 @@ public class Teleop extends Fragment implements View.OnClickListener{
                 lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
                 //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] + 1);
                 MainActivity.lowerScoredTeleop++;
+                System.out.println(MainActivity.lowerScoredTeleop);
                 break;
 
             case R.id.lowerHubTeleopScoredDecrease:
@@ -117,6 +118,8 @@ public class Teleop extends Fragment implements View.OnClickListener{
                     lowerHubTeleopScored.setText(Integer.toString(lowerHubTeleopScoredCounter));
                     //MainActivity.editMatchData(1, 2, MainActivity.getButtonData()[0][2] - 1);
                     MainActivity.lowerScoredTeleop--;
+                    System.out.println(MainActivity.lowerScoredTeleop);
+
                 } break;
 
             case R.id.lowerHubTeleopMissedIncrease:
