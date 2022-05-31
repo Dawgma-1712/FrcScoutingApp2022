@@ -66,11 +66,12 @@ public class save extends Fragment implements View.OnClickListener{
 
                 // Good luck reading :)
                 String data = "";
+
                 data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
                         /* Auto */   + MainActivity.taxi + "," + MainActivity.lowerScoredAuto + "," + MainActivity.lowerMissedAuto + "," + MainActivity.upperScoredAuto + "," + MainActivity.upperMissedAuto + ","
                         /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + "," + MainActivity.fender + "," + MainActivity.tarmac + "," + MainActivity.launchPad + "," + MainActivity.genLoc + ","
                         /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
-                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt;
+                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
                 alterDocument(uri, data);
             }
@@ -114,6 +115,13 @@ public class save extends Fragment implements View.OnClickListener{
                         MainActivity.defendedOnByNumber = Teleop.defendedByNum.getText().toString();
                     }
 
+                    if (MainActivity.scoutNameText.getText().toString() != null){
+                        MainActivity.scoutName = MainActivity.scoutNameText.getText().toString();
+                    }
+                    if (endgame.additionalNotesText.getText().toString() != null){
+                        MainActivity.additionalNotes = endgame.additionalNotesText.getText().toString();
+                    }
+
 
                 }
                 catch (Exception e){
@@ -121,11 +129,11 @@ public class save extends Fragment implements View.OnClickListener{
                 }
 
 
-                data = MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
+                data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
                         /* Auto */   + MainActivity.taxi + "," + MainActivity.lowerScoredAuto + "," + MainActivity.lowerMissedAuto + "," + MainActivity.upperScoredAuto + "," + MainActivity.upperMissedAuto + ","
                         /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + "," + MainActivity.fender + "," + MainActivity.tarmac + "," + MainActivity.launchPad + "," + MainActivity.genLoc + ","
-                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + "," + MainActivity.noClimbAttempt + ","
-                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot;
+                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
+                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 
                 //Initialize multi format writer
@@ -184,11 +192,11 @@ public class save extends Fragment implements View.OnClickListener{
                 System.out.println(MainActivity.matchNumber);
                 System.out.println(MainActivity.defendedOnByNumber);
 
-                data = MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
+                data += MainActivity.teamNumber + "," + MainActivity.matchNumber + ","
                         /* Auto */   + MainActivity.taxi + "," + MainActivity.lowerScoredAuto + "," + MainActivity.lowerMissedAuto + "," + MainActivity.upperScoredAuto + "," + MainActivity.upperMissedAuto + ","
                         /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + "," + MainActivity.fender + "," + MainActivity.tarmac + "," + MainActivity.launchPad + "," + MainActivity.genLoc + ","
-                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + "," + MainActivity.noClimbAttempt + ","
-                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot;
+                        /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
+                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 
                 // Create and save file

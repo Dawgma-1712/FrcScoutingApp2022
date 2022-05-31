@@ -10,180 +10,177 @@
 
 
     <CheckBox
-        android:id="@+id/lowHangSuccess"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:gravity="center"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Low Hang Success"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.322" />
-
-    <CheckBox
-        android:id="@+id/traversalHangSuccess"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Traversal Hang Success"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
-    <CheckBox
-        android:id="@+id/midHangSuccess"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Mid Hang Success"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
-
-    <CheckBox
-        android:id="@+id/midHangFailure"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Mid Hang Failure"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.416" />
-
-    <CheckBox
-        android:id="@+id/highHangFailure"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="High Hang Failure"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.503" />
-
-    <CheckBox
-        android:id="@+id/lowHangFailure"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Low Hang Failure"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323" />
-
-    <CheckBox
-        android:id="@+id/traversalHangFailure"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="Traversal Hang Failure"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.182"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.596" />
-
-    <CheckBox
-        android:id="@+id/highHangSuccess"
-        android:layout_width="200dp"
-        android:layout_height="85dp"
-        android:button="@null"
-        android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
-        android:minWidth="48dp"
-        android:minHeight="48dp"
-        android:onClick="onCheckBoxClicked"
-        android:text="High Hang Success"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.79"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.502" />
-
-    <CheckBox
         android:id="@+id/noClimbAttempt"
-        android:layout_width="141dp"
-        android:layout_height="65dp"
+        android:layout_width="137dp"
+        android:layout_height="44dp"
+        android:onClick="onCheckBoxClicked"
         android:text="No Climb Attempt"
-        android:onClick = "onCheckBoxClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintHorizontal_bias="0.326"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.684" />
+        app:layout_constraintVertical_bias="0.563" />
 
     <CheckBox
         android:id="@+id/deadBot"
-        android:layout_width="134dp"
-        android:layout_height="62dp"
+        android:layout_width="168dp"
+        android:layout_height="45dp"
+        android:onClick="onCheckBoxClicked"
         android:text="Dead Bot"
-        android:onClick = "onCheckBoxClicked"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
+        app:layout_constraintHorizontal_bias="0.349"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintVertical_bias="0.68" />
 
     <CheckBox
         android:id="@+id/penalized"
-        android:layout_width="136dp"
-        android:layout_height="67dp"
+        android:layout_width="143dp"
+        android:layout_height="54dp"
+        android:onClick="onCheckBoxClicked"
         android:text="Penalized"
-        android:onClick = "onCheckBoxClicked"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.818"
+        app:layout_constraintHorizontal_bias="0.33"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintVertical_bias="0.622" />
+
+    <EditText
+        android:id="@+id/additionalNotes"
+        android:layout_width="440dp"
+        android:layout_height="195dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.93" />
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/traversalHangFailure"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="Trav Fail" />
+
+        <RadioButton
+            android:id="@+id/traversalHangSuccess"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="Trav Success" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.437"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.239">
+
+        <RadioButton
+            android:id="@+id/highHangFailure"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="High Fail" />
+
+        <RadioButton
+            android:id="@+id/highHangSuccess"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="High Success" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.328">
+
+        <RadioButton
+            android:id="@+id/midHangFailure"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="Mid Fail" />
+
+        <RadioButton
+            android:id="@+id/midHangSuccess"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="Mid Success" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="300dp"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.41">
+
+        <RadioButton
+            android:id="@+id/lowHangFailure"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="Low Fail" />
+
+        <RadioButton
+            android:id="@+id/lowHangSuccess"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:buttonTint="#1A99C4"
+            android:onClick="onRadioButtonClicked"
+            android:text="Low Success" />
+    </RadioGroup>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
