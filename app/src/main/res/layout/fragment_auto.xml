@@ -25,17 +25,18 @@
 
     <Button
         android:id="@+id/lowerHubAutoScoredDecrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="8dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/lowerHubAutoMissedIncrease"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
+        app:layout_constraintVertical_bias="0.814" />
 
     <TextView
         android:id="@+id/lowerHubAutoMissed"
@@ -45,10 +46,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.782"
+        app:layout_constraintHorizontal_bias="0.766"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.763" />
+        app:layout_constraintVertical_bias="0.776" />
 
     <TextView
         android:id="@+id/lowerAutoScoredLabel"
@@ -72,10 +73,10 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.19"
+        app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.763" />
+        app:layout_constraintVertical_bias="0.786" />
 
     <TextView
         android:id="@+id/upperAutoScoredLabel"
@@ -93,46 +94,48 @@
 
     <Button
         android:id="@+id/lowerHubAutoMissedIncrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="16dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.778" />
+        app:layout_constraintVertical_bias="0.814" />
 
     <Button
         android:id="@+id/upperHubAutoScoredDecrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="4dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <Button
         android:id="@+id/lowerHubAutoScoredIncrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintVertical_bias="0.812" />
 
     <TextView
         android:id="@+id/upperHubAutoScored"
@@ -142,10 +145,9 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.189"
+        app:layout_constraintHorizontal_bias="0.235"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/upperHubAutoMissed"
@@ -169,15 +171,15 @@
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.807"
+        app:layout_constraintHorizontal_bias="0.803"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.703" />
+        app:layout_constraintVertical_bias="0.693" />
 
     <Button
         android:id="@+id/upperHubAutoMissedDecrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="-"
         android:textColor="@color/white"
@@ -191,15 +193,15 @@
 
     <Button
         android:id="@+id/upperHubAutoScoredIncrease"
-        android:layout_width="61dp"
-        android:layout_height="58dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.296"
+        app:layout_constraintHorizontal_bias="0.343"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.496" />
@@ -220,32 +222,33 @@
 
     <Button
         android:id="@+id/lowerHubAutoMissedDecrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="-"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.662"
+        app:layout_constraintHorizontal_bias="0.678"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintVertical_bias="0.814" />
 
     <Button
         android:id="@+id/upperHubAutoMissedIncrease"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="91dp"
+        android:layout_height="100dp"
         android:background="@color/maroon4"
         android:text="+"
         android:textColor="@color/white"
         android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.496" />
+        app:layout_constraintVertical_bias="0.499" />
 
     <TextView
         android:id="@+id/lowerHubAutoLabel"
