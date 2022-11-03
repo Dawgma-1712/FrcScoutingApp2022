@@ -54,8 +54,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static int taxi = 0;
     public static int alliance = 0;
-    public static int playedDefense=0;
-    public static int defendedOn = 0 ;
+    public static int playedDefense = 0;
+    public static int defendedOn = 0;
 
     public static int fender = 0;
     public static int tarmac = 0;
@@ -85,8 +85,6 @@ public class MainActivity extends AppCompatActivity {
     public static int lowerMissedTeleop = 0;
 
 
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -102,8 +100,8 @@ public class MainActivity extends AppCompatActivity {
 
         vpAdapter.addFragment(new Auto(), "Auto");
         vpAdapter.addFragment(new Teleop(), "Teleop");
-        vpAdapter.addFragment(new endgame(),"Endgame");
-        vpAdapter.addFragment(new save(),"Save");
+        vpAdapter.addFragment(new endgame(), "Endgame");
+        vpAdapter.addFragment(new save(), "Save");
         viewPager.setAdapter(vpAdapter);
 
         teamNumText = (EditText) findViewById(R.id.teamNum);
@@ -111,8 +109,8 @@ public class MainActivity extends AppCompatActivity {
         scoutNameText = (EditText) findViewById(R.id.name);
 
         taxi = 0;
-        playedDefense=0;
-        defendedOn = 0 ;
+        playedDefense = 0;
+        defendedOn = 0;
 
         fender = 0;
         tarmac = 0;
@@ -142,10 +140,6 @@ public class MainActivity extends AppCompatActivity {
         lowerMissedTeleop = 0;
 
 
-
-
-
-
     }
 
     public static void editMatchData(int ind0, int ind1, int value) {
@@ -157,7 +151,7 @@ public class MainActivity extends AppCompatActivity {
         boolean checked = ((CheckBox) view).isChecked();
 
         // Check which one clicked
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.playedDefenseCheckBox:
                 //MainActivity.checkBoxData[2] = checked ? 1 : 0;
                 MainActivity.playedDefense = checked ? 1 : 0;
@@ -200,7 +194,6 @@ public class MainActivity extends AppCompatActivity {
                 //MainActivity.lowFail = 0;
 
 
-
                 break;
             case R.id.midHangFailure:
                 //MainActivity.checkBoxData[10] = checked ? 1 : 0;
@@ -209,21 +202,21 @@ public class MainActivity extends AppCompatActivity {
                 //MainActivity.midSuccess = 0;
 
                 break;
-            case R. id.midHangSuccess:
+            case R.id.midHangSuccess:
                 //MainActivity.checkBoxData[11] = checked ? 1 : 0;
                 MainActivity.midSuccess = checked ? 1 : 0;
 
                 //MainActivity.midFail = 0;
 
                 break;
-            case R. id.highHangFailure:
+            case R.id.highHangFailure:
                 //MainActivity.checkBoxData[12] = checked ? 1 : 0;
                 MainActivity.highFail = checked ? 1 : 0;
                 //view.findViewById(R.id.highHangSuccess).setSelected(false);
                 //MainActivity.highSuccess = 0;
 
                 break;
-            case R. id.highHangSuccess:
+            case R.id.highHangSuccess:
                 //MainActivity.checkBoxData[13] = checked ? 1 : 0;
                 MainActivity.highSuccess = checked ? 1 : 0;
                 //view.findViewById(R.id.highHangFailure).setSelected(false);
@@ -237,7 +230,7 @@ public class MainActivity extends AppCompatActivity {
                 ///MainActivity.travSuccess = 0;
 
                 break;
-            case R. id.traversalHangSuccess:
+            case R.id.traversalHangSuccess:
                 //MainActivity.checkBoxData[15] = checked ? 1 : 0;
                 MainActivity.travSuccess = checked ? 1 : 0;
                 //view.findViewById(R.id.traversalHangFailure).setSelected(false);
@@ -265,14 +258,12 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
     }
 
-    public void onRadioButtonClicked (View view){
-        boolean checked = ((RadioButton)view).isChecked();
+    public void onRadioButtonClicked(View view) {
+        boolean checked = ((RadioButton) view).isChecked();
 
-        switch(view.getId()) {
+        switch (view.getId()) {
             case R.id.blue:
                 MainActivity.alliance = 1;
                 System.out.println(MainActivity.alliance);
@@ -282,103 +273,12 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.alliance = 0;
                 System.out.println(MainActivity.alliance);
                 break;
-
-            case R.id.lowHangFailure:
-                //MainActivity.checkBoxData[8] = checked ? 1: 0;
-                MainActivity.lowFail = 1;
-                MainActivity.lowSuccess = 0;
-                //MainActivity.lowSuccess = 0;
-
-                break;
-            case R.id.lowHangSuccess:
-                //MainActivity.checkBoxData[9] = checked ? 1 : 0;
-                MainActivity.lowFail = 0;
-                MainActivity.lowSuccess = 1;
-                //MainActivity.lowFail = 0;
-
-
-
-                break;
-            case R.id.midHangFailure:
-                //MainActivity.checkBoxData[10] = checked ? 1 : 0;
-                MainActivity.midFail = 1;
-                MainActivity.midSuccess = 0;
-                //((CheckBox)findViewById(R.id.midHangSuccess)).setSelected(false);
-                //MainActivity.midSuccess = 0;
-
-                break;
-            case R. id.midHangSuccess:
-                //MainActivity.checkBoxData[11] = checked ? 1 : 0;
-                MainActivity.midFail = 0;
-                MainActivity.midSuccess = 1;
-
-                //MainActivity.midFail = 0;
-
-                break;
-            case R. id.highHangFailure:
-                //MainActivity.checkBoxData[12] = checked ? 1 : 0;
-                MainActivity.highFail = 1;
-                MainActivity.highSuccess = 0;
-                //view.findViewById(R.id.highHangSuccess).setSelected(false);
-                //MainActivity.highSuccess = 0;
-
-                break;
-            case R. id.highHangSuccess:
-                //MainActivity.checkBoxData[13] = checked ? 1 : 0;
-                MainActivity.highFail = 0;
-                MainActivity.highSuccess = 1;
-
-                //view.findViewById(R.id.highHangFailure).setSelected(false);
-                //MainActivity.highFail = 0;
-
-                break;
-            case R.id.traversalHangFailure:
-                //MainActivity.checkBoxData[14] = checked ? 1 : 0;
-                MainActivity.travFail = 1;
-                MainActivity.travSuccess = 0;
-                //view.findViewById(R.id.traversalHangSuccess).setSelected(false);
-                ///MainActivity.travSuccess = 0;
-
-                break;
-            case R. id.traversalHangSuccess:
-                //MainActivity.checkBoxData[15] = checked ? 1 : 0;
-                MainActivity.travFail = 0;
-                MainActivity.travSuccess = 1;
-                //view.findViewById(R.id.traversalHangFailure).setSelected(false);
-                //MainActivity.travFail = 0;
-
-                break;
         }
-    }
 
-
-
-
-
-    public static int[][] getButtonData() {
-        return buttonData;
-    }
-    public static int[] getCheckBoxData() { return checkBoxData; }
 //
 //    public void updateTeamAndMatchNum() {
 //        teamNumber = Integer.parseInt(((EditText)findViewById(R.id.teamNum)).getText().toString());
 //        matchNumber = Integer.parseInt(((EditText)findViewById(R.id.matchNum)).getText().toString());
 //    }
-    public static String getTeamNumber() {return teamNumber;}
-    public static String getMatchNumber() {return matchNumber;}
-
-
-
-
-    public static final int CREATE_FILE = 1;
-    public static Uri fileUri;
-
-
-
-
-
-    
-
-
-
+    }
 }

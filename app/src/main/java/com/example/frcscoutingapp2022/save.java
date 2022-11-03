@@ -133,7 +133,7 @@ public class save extends Fragment implements View.OnClickListener{
                         /* Auto */   + MainActivity.taxi + "," + MainActivity.lowerScoredAuto + "," + MainActivity.lowerMissedAuto + "," + MainActivity.upperScoredAuto + "," + MainActivity.upperMissedAuto + ","
                         /* TeleOp */ + MainActivity.playedDefense + "," + MainActivity.defendedOn + "," + MainActivity.defendedOnByNumber + "," + MainActivity.lowerScoredTeleop + "," + MainActivity.lowerMissedTeleop + "," + MainActivity.upperScoredTeleop + "," + MainActivity.upperMissedTeleop + "," + MainActivity.fender + "," + MainActivity.tarmac + "," + MainActivity.launchPad + "," + MainActivity.genLoc + ","
                         /* Climb */  + MainActivity.lowFail + "," + MainActivity.lowSuccess + "," + MainActivity.midFail + "," + MainActivity.midSuccess + "," + MainActivity.highFail + "," + MainActivity.highSuccess + "," + MainActivity.travFail + "," + MainActivity.travSuccess + ","
-                        /* AddInfo*/ + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.noClimbAttempt + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
+                        /* AddInfo*/ + MainActivity.noClimbAttempt + "," + MainActivity.penalty + "," + MainActivity.deadBot + "," + MainActivity.alliance + "," + MainActivity.additionalNotes  + "," + MainActivity.scoutName;
 
 
                 //Initialize multi format writer
