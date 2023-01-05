@@ -27,8 +27,7 @@ import android.widget.RadioButton;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.util.*;
-
+import java.util.HashMap;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -52,42 +51,9 @@ public class MainActivity extends AppCompatActivity {
     public static int[] checkBoxData;
     public static String defendedOnByNumber = "";
 
-    Map<String,Integer> matchCounters = new HashMap<>();
-
-    matchCounters.put("taxi",0);
-    matchCounters.put("alliance",0);
-    matchCounters.put("playedDefense ",0);
-    matchCounters.put("defendOn",0);
-
-    matchCounters.put("fender",0);
-    matchCounters.put("tarmac",0);
-    matchCounters.put("launchPad",0);
-    matchCounters.put("genLoc",0);
-
-    matchCounters.put("lowFail",0);
-    matchCounters.put("lowSuccess",0);
-    matchCounters.put("midFail",0);
-    matchCounters.put("midSuccess",0);
-    matchCounters.put("highFail",0);
-    matchCounters.put("highSuccess",0);
-    matchCounters.put("travFail",0);
-    matchCounters.put("travSuccess",0);
-    matchCounters.put("penalty",0);
-    matchCounters.put("deadBot",0);
-    matchCounters.put("noClimbAttempt",0);
-
-    matchCounters.put("upperScoredAuto",0);
-    matchCounters.put("upperMissedAuto",0);
-    matchCounters.put("lowerScoredAuto",0);
-    matchCounters.put("lowerMissedAuto",0);
-
-    matchCounters.put("upperScoredTeleop",0);
-    matchCounters.put("upperMissedTeleop",0);
-    matchCounters.put("lowerScoredTeleop",0);
-    matchCounters.put("lowerMissedTeleop",0);
 
     public static int taxi = 0;
-    public static int alliance =0;
+    public static int alliance = 0;
     public static int playedDefense = 0;
     public static int defendedOn = 0;
 
